@@ -1,0 +1,764 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8">
+<style>#right-panel {
+    background-color: #fff;
+}
+
+#right-panel .cover-top {
+    background: linear-gradient(to bottom, #fff 50%, transparent);
+}
+
+#cover-bottom #cover-bottom-background-right {
+    background: #fff;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+#container {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #373737;
+  font-family: "Roboto", "Noto Sans", "Ubuntu", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif, "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft Yahei";
+  font-size: 14px;
+  line-height: 2;
+  word-wrap: break-word;
+  background-color: #fff;
+}
+
+#container a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+#container a:active,
+#container a:hover {
+  outline-width: 0;
+}
+
+#container strong {
+  font-weight: inherit;
+}
+
+#container strong {
+  font-weight: bolder;
+}
+
+#container h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+#container img {
+  border-style: none;
+}
+
+#container svg:not(:root) {
+  overflow: hidden;
+}
+
+#container code,
+#container kbd,
+#container pre {
+  font-family: "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  font-size: 1em;
+}
+
+#container hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+#container input {
+  font: inherit;
+  margin: 0;
+}
+
+#container input {
+  overflow: visible;
+}
+
+#container button:-moz-focusring,
+#container [type="button"]:-moz-focusring,
+#container [type="reset"]:-moz-focusring,
+#container [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+#container [type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#container table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+#container td,
+#container th {
+  padding: 0;
+}
+
+#container * {
+  box-sizing: border-box;
+}
+
+#container input {
+  font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#container a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+#container a:hover,
+#container a:active {
+  text-decoration: underline;
+}
+
+#container hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#container hr::before {
+  display: table;
+  content: "";
+}
+
+#container hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+#container h1,
+#container h2,
+#container h3,
+#container h4,
+#container h5,
+#container h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+#container h1 {
+  font-size: 30px;
+}
+
+#container h2 {
+  font-size: 21px;
+}
+
+#container h3 {
+  font-size: 16px;
+}
+
+#container h4 {
+  font-size: 14px;
+}
+
+#container h5 {
+  font-size: 12px;
+}
+
+#container h6 {
+  font-size: 11px;
+}
+
+#container p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#container blockquote {
+  margin: 0;
+}
+
+#container ul,
+#container ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#container ol ol,
+#container ul ol {
+  list-style-type: lower-roman;
+}
+
+#container ul ul ol,
+#container ul ol ol,
+#container ol ul ol,
+#container ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+#container dd {
+  margin-left: 0;
+}
+
+#container code {
+  font-family: "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  font-size: 12px;
+}
+
+#container pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+}
+
+#container .pl-0 {
+  padding-left: 0 !important;
+}
+
+#container .pl-1 {
+  padding-left: 3px !important;
+}
+
+#container .pl-2 {
+  padding-left: 6px !important;
+}
+
+#container .pl-3 {
+  padding-left: 12px !important;
+}
+
+#container .pl-4 {
+  padding-left: 24px !important;
+}
+
+#container .pl-5 {
+  padding-left: 36px !important;
+}
+
+#container .pl-6 {
+  padding-left: 48px !important;
+}
+
+#container .form-select::-ms-expand {
+  opacity: 0;
+}
+
+#container:before {
+  display: table;
+  content: "";
+}
+
+#container:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+#container>*:first-child {
+  margin-top: 0 !important;
+}
+
+#container>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+#container a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+#container .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+#container .anchor:focus {
+  outline: none;
+}
+
+#container h1,
+#container h2,
+#container h3,
+#container h4,
+#container h5,
+#container h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+#container h1 .octicon-link,
+#container h2 .octicon-link,
+#container h3 .octicon-link,
+#container h4 .octicon-link,
+#container h5 .octicon-link,
+#container h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+#container h1:hover .anchor,
+#container h2:hover .anchor,
+#container h3:hover .anchor,
+#container h4:hover .anchor,
+#container h5:hover .anchor,
+#container h6:hover .anchor {
+  text-decoration: none;
+}
+
+#container h1:hover .anchor .octicon-link,
+#container h2:hover .anchor .octicon-link,
+#container h3:hover .anchor .octicon-link,
+#container h4:hover .anchor .octicon-link,
+#container h5:hover .anchor .octicon-link,
+#container h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+#container h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+#container h1 .anchor {
+  line-height: 1;
+}
+
+#container h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+#container h2 .anchor {
+  line-height: 1;
+}
+
+#container h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+#container h3 .anchor {
+  line-height: 1.2;
+}
+
+#container h4 {
+  font-size: 1.25em;
+}
+
+#container h4 .anchor {
+  line-height: 1.2;
+}
+
+#container h5 {
+  font-size: 1em;
+}
+
+#container h5 .anchor {
+  line-height: 1.1;
+}
+
+#container h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+#container h6 .anchor {
+  line-height: 1.1;
+ 
+}
+
+#container p,
+#container blockquote,
+#container ul,
+#container ol,
+#container dl,
+#container table,
+#container pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+#container hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+#container ul,
+#container ol {
+  padding-left: 2em;
+}
+
+#container ul ul,
+#container ul ol,
+#container ol ol,
+#container ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#container li>p {
+  margin-top: 16px;
+}
+
+#container dl {
+  padding: 0;
+}
+
+#container dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#container dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+#container blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+#container blockquote>:first-child {
+  margin-top: 0;
+}
+
+#container blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+#container table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+#container table th {
+  font-weight: bold;
+}
+
+#container table th,
+#container table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+#container table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+#container table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+#container img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+#container code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+#container code:before,
+#container code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+#container pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+#container .highlight {
+  margin-bottom: 16px;
+}
+
+#container .highlight pre,
+#container pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+#container .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+#container pre {
+  word-wrap: normal;
+}
+
+#container pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+#container pre code:before,
+#container pre code:after {
+  content: normal;
+}
+
+#container kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+#container .pl-c {
+  color: #969896;
+}
+
+#container .pl-c1,
+#container .pl-s .pl-v {
+  color: #0086b3;
+}
+
+#container .pl-e,
+#container .pl-en {
+  color: #795da3;
+}
+
+#container .pl-s .pl-s1,
+#container .pl-smi {
+  color: #333;
+}
+
+#container .pl-ent {
+  color: #63a35c;
+}
+
+#container .pl-k {
+  color: #a71d5d;
+}
+
+#container .pl-pds,
+#container .pl-s,
+#container .pl-s .pl-pse .pl-s1,
+#container .pl-sr,
+#container .pl-sr .pl-cce,
+#container .pl-sr .pl-sra,
+#container .pl-sr .pl-sre {
+  color: #183691;
+}
+
+#container .pl-v {
+  color: #ed6a43;
+}
+
+#container .pl-id {
+  color: #b52a1d;
+}
+
+#container .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+#container .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+#container .pl-ml {
+  color: #693a17;
+}
+
+#container .pl-mh,
+#container .pl-mh .pl-en,
+#container .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+#container .pl-mq {
+  color: #008080;
+}
+
+#container .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+#container .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+#container .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+#container .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+#container .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+#container .pl-mo {
+  color: #1d3e81;
+}
+
+#container kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+#container .full-commit .btn-outline:not(:disabled):hover {
+  color: #4078c0;
+  border: 1px solid #4078c0;
+}
+
+#container :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #4078c0;
+}
+
+#container .octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+
+#container .task-list-item {
+  list-style-type: none;
+}
+
+#container .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+#container .task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+#container hr {
+  border-bottom-color: #eee;
+}
+
+</style></head><body id="container" class="export export-html"><span i="1"><h3 id="-" style = color:red>字符编码</h3>
+</span><span i="2"><h6 id="-ascii-iso-8859-gb2312-big5-gb18030-unicode-"><span style=color:#00ff00>* 字符集</span>：很多字符的集合，如文字，标点，图形，数字等的集合；常见的有：ASCII字符集、ISO 8859字符集、GB2312字符集、BIG5字符集、GB18030字符集、Unicode字符集等。</h6>
+</span><span i="3"><h6 id="-"><span style = color:#00ff00>*字符编码</span>：是以二进制的数字来对应字符集的字符，计算机需要对各种字符进行编码，才能对各种文字进行处理。</h6>
+</span><span i="4"><h6 id="-">
+<span style = color:#00ff00>*编码</span>：每个字符用单字节或多字节存储，用哪些字符存储，字符集与编码一般同时制定。</h6>
+</span><span i="5"><hr>
+</span><span i="6"><h3 id="-" style = color:red>常用编码</h3>
+</span><span i="7"><h6 id="-ascll-american-standard-code-for-information-interchange-eascii-26-"><span style = color:#00ff00><a href = "http://www.asciima.com">* ASCII（American Standard Code for Information Interchange，美国信息互换标准代码）</a></span>：单字节编码，基于拉丁字母的一套电脑编码系统，主要用于显示现代英语，而其扩展版本EASCII则可以勉强显示其他西欧语言，只能显示26个基本拉丁字母、阿拉伯数目字和英式标点符号。</h6>
+</span><span i="8"><h6 id="-ansi-american-national-standards-institute-ascii-0x00-0x7f-0x80-0xff-gb2312-big5-jis-unicode-"><span style = color:#00ff00>*ANSI编码(American National Standards Institute，美国国家标准学会)</span>：多字节编码，系统里的英文和符号就使用单字节的 ASCII（0x00~0x7f），而对于汉字之类的本地化字符编码，就采用 0x80~0xFF 范围内的多个字节来表示，不同的国家和地区制定了不同的标准，由此产生了GB2312,BIG5,JIS等各自的编码标准，在非 Unicode 环境下，由于不同国家和地区采用的字符集不一致，很可能出现乱码问题。</h6>
+</span><span i="9"><h6 id="-unicode-unicode-character-set-unicode-unicode-"><span style = color:#00ff00>*Unicode（Unicode Character Set）</span>：国际组织制定的 UNICODE 无国界字符集，各种语言中的每一个字符设定了统一并且唯一的数字编号，便于国际交流，这种编码方式改为存放每个字节在unicode字符集中的序号。</h6>
+</span><span i="11"><ul>
+<li><span i="11">ucs-2:两个字节编码（常用）    ucs-4: 四个字节编码 </span></li>
+</ul>
+</span><span i="14"><hr>
+</span><span i="15"><h3 id="-" style= color:red>各大编码区别</h3>
+</span><span i="16"><h6 id="-gb2312-1980-gb-ascll-127-127-6763-3755-3008-682-"><span style= color:#00ff00>*GB2312（1980年发布,GB-"国标"汉语拼音首字母）</span>:ASCII码中小于127的字符的意义与原来相同，但两个大于127的字符连在一起时，就表示一个汉字，高字节在前，低字节在后；共收录6763个汉字，其中一级汉字3755个，二级汉字3008个；同时收录了包括拉丁字母、希腊字母、日文平假名及片假名字母、俄语西里尔字母在内的682个全角字符。</h6>
+</span><span i="17"><ul>
+<li><span i="17">全角字符 ：对ASCII 里本来就有的数字、标点、字母都统统重新编了两个字节长的编码；</span></li>
+<li><span i="18">半角字符 ：之前127号以下的那些就叫"半角"字符；</span></li>
+</ul>
+</span><span i="21"><h6 id="-gbk-1995-6763-127-127-gb2312-21003-iso-iec10646-1-gb13000-1-big5-"><span style =color:#00ff00>*GBK（1995年发布，“国标扩展”）</span>：由于中国汉字太多，6763个汉字无法满足要求，故不要求第二个字符一定大于127， 只要第一个字符大于127就默是汉字，它是GB2312的扩展，收录了21003个汉字，支持国际标准ISO/IEC10646-1和国家标准GB13000-1中的全部中日韩汉字，并包含了BIG5编码中的所有汉字。</h6>
+</span><span i="22"><h6 id="-gb18030-2000-2005-gbk-gb18030-2000-"><span style= color:#00ff00>*GB18030</span>：分为 2000与2005两个版本是GBK的扩展，是目前我国计算机系统必须遵GB18030-2000循的基础标准之一；</h6>
+</span><span i="23"><ul>
+<li><span i="23">GB18030-2000 ：GBK的取代版本，作为国家标准强制执行</span></li>
+<li><span i="24">GB18030-2005：是我国自主研制的以汉字为主并包含多种我国少数民族文字（如藏、蒙古、傣、彝、朝鲜、维吾尔文等）的超大型中文编码字符集强制性标准，其中收入汉字70244，增加的这些内容是推荐性的；</span></li>
+</ul>
+</span><span i="27"><h6 id="-utf-unicode-transformation-format-unicode-ascll-unicode-utf-unicode-utf-7-utf-8-utf-16-utf-32-utf-8-utf-16-"><span style= color:#00ff00>*UTF（Unicode Transformation Format）</span>：因国际组织发布的unicode仅仅为一种编码方式，不能很快普及，且部分与ASCII字符集不兼容等等一系列问题，所以产生了其unicode的实现方式，称为UTF，它是中间媒介，将unicode的编码规则与计算机的实际编码对应起来的规则，分为UTF-7，UTF-8，UTF-16，UTF-32，其中常用的为UTF-8和UTF-16；</h6>
+</span><span i="29"><ul>
+<li><span i="29"><span style=color:#9900FF ><b>UTF-7</b></span>:7位 Unicode转换格式，是一种可变长度的字符编码，用于使用ASCII字符流来表示Unicode文本。它最初旨在提供一种编码Unicode文本的手段，用于互联网电子邮件消息，其效率高于UTF-8与可引用打印的组合；</span></li>
+<li><span i="30"><span style=color:#9900FF ><b>UTF-8</b></span>:能够编码所有可能的Unicode 码点的字符编码，灵活的变长编码，对于 ASCII 使用一个字节编码，其他本地化语言文字用多个字节编码，最长可以到 6 个字节编码一个字符。对于汉字，通常是 3 个字节表示一个汉字。这是 Unix/Linux 系统默认的字符编码。</span></li>
+<li><span i="31"><span style=color:#9900FF ><b>UTF - 16</b></span> ：一般都是两字节表示一个字符，对于超出两字节的国际码字符，使用一对两字节来表示。在存储时，按两个字节的排布顺序，分为大端字节序和小端字节序； </span></li>
+</ul>
+</span><span i="34"><blockquote>
+<span i="34"><p>&gt;</p>
+</span><span i="35"><ul>
+<li><span i="35"><span style=color:#996633>LitterEndianUnicode （小端字节序）</span>: 低字节在前，高字节在后</span></li>
+<li><span i="36"><span style= color:#996633>BigEndianUnicode （大端字节序）</span>: 高字节在前，低字节在后</span></li>
+<li><span i="37"><span style=color:#996633>BOM（Byte Order Mark）</span>，字节顺序标记,为了识别 Unicode 文件，Microsoft 建议所有的 Unicode 文件应该以 ZERO WIDTH NOBREAK SPACE（U+FEFF）字符开头。这作为一个“特征符”或“字节顺序标记（byte-order mark，BOM）”来识别文件中使用的编码和字节顺序，Linux/UNIX 并没有使用 BOM，因为它会破坏现有的 ASCII 文件的语法约定，window不同编辑器对BOM处理也不相同；</span></li>
+<li><span i="38"><span style=color:#996633>两者存储顺序不同</span>，如"A"的Unicode编码为6500，而BigEndianUnicode编码为0065；</span></li>
+</ul>
+</span></blockquote>
+</span><span i="41"><ul>
+<li><span i="41"><span style=color:#9900FF ><b>UTF - 32</b></span>: UCS-4，因为用四个字节表示一个字符，所以不需要考虑扩展了。这种编码方式简单，但也特别浪费空间，所以应用很少。在存储时也分为 UTF-32BE 和 UTF-32LE，因为用得少，所以不用太关心这种编码格式。</span></li>
+</ul>
+</span><span i="44"><h6 id="-iso8859-http-www-z4a-net-image-jm7ck">*<span style=color:#00ff00><a href="http://www.z4a.net/image/JM7CK">ISO8859</a></span>：一系列的标准，以同样的码位对应不同字符集。</h6>
+</span><span i="45"><h6 id="-shift_jis-">* <span style =color:#00ff00>Shift_JIS </span>：日本电脑系统常用的编码表。</h6>
+</span><span i="46"><h6 id="-big5-">*<span style =color:#00ff00>Big5</span>：大五码，是通行于港澳台地区的一个繁体字编码方案。</h6>
+</span><span i="47"><h6 id="-koi8-u-koi-8-8-">* <span style = color:#00ff00>KOI8-U</span>：KOI-8系列的斯拉夫文字8位元编码，供乌克兰语使用；</h6>
+</span><span i="48" ><h6 id="-koi8-r-koi-8-8-" >*<span style = color:#00ff00> KOI8-R</span>：KOI-8系列的斯拉夫文字8位元编码，供俄语及保加利亚语使用；</h6>
+</span></body>
+</html>
